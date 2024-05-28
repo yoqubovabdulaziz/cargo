@@ -1,0 +1,52 @@
+#service {
+  .service {
+    padding: 100px 10px;
+    &__title {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    &__description {
+      text-align: center;
+      font-size: 16px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    &__wrapper {
+      padding: 40px 0;
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    &__box {
+      display: flex;
+      gap: 20px;
+      border: 1.4px solid #ddd;
+      border-radius: 4px;
+      padding: 20px 10px;
+      svg {
+        font-size: 34px;
+        color: #4d4d4d;
+        transition: 0.5s;
+      }
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        color: #4d4d4d;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 400;
+        color: #4d4d4d;
+      }
+    }
+    &__box:hover {
+      border: 1px solid #157489;
+      svg {
+        transform: translateX(10px) !important;
+        color: #157489;
+      }
+    }
+  }
+}

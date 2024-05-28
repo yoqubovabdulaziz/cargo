@@ -1,0 +1,101 @@
+header {
+  height: 80px;
+  background-color: transparent;
+  position: fixed;
+  width: 100%;
+  z-index: 100 !important;
+  transition: 0.3s;
+  .nav {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      font-size: 22px;
+      color: #fff;
+    }
+    &__list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 34px;
+      a {
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+      }
+    }
+    &__end {
+      &__language__btn {
+        position: relative;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        background-color: #ddd5;
+        padding: 8px;
+        border-radius: 8px;
+        .language__btn__frame {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: #fff;
+          svg {
+            font-size: 18px;
+          }
+        }
+        .language__btn__down {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+        }
+      }
+      .language__dropdown {
+        position: absolute;
+        top: 30px;
+        transition: 0.3s;
+        left: 0;
+        opacity: 0;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.4);
+        width: 100px;
+        display: none;
+        &__item {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+          padding: 10px;
+          background-color: #fff;
+          &__frame {
+            width: 50%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        &__item:hover {
+          background-color: #ddd;
+        }
+      }
+      .language__dropdown.show__language__dropdown {
+        top: 40px;
+        opacity: 1;
+        display: block;
+      }
+    }
+  }
+}
+
+header.nav__shrink {
+  background-color: rgba(255, 255, 255, 0.1);
+  background-color: #157489;
+  backdrop-filter: blur(5px);
+  z-index: 5;
+  height: 60px;
+}
