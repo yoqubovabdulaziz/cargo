@@ -19,6 +19,9 @@ header {
       justify-content: center;
       align-items: center;
       gap: 34px;
+      @media (max-width: 730px) {
+        display: none;
+      }
       a {
         font-size: 18px;
         font-weight: 600;
@@ -26,6 +29,22 @@ header {
       }
     }
     &__end {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      .nav__menu__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 36px;
+        color: #fff;
+        background-color: transparent;
+        display: none;
+        @media (max-width: 730px) {
+          display: flex;
+        }
+      }
       &__language__btn {
         position: relative;
         height: 40px;

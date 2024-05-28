@@ -18,6 +18,10 @@
       justify-content: space-between;
       gap: 24px;
       padding: 50px 0;
+      @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
     &__box {
       max-width: 300px;
@@ -52,6 +56,10 @@
         align-items: center;
         gap: 40px;
         margin-bottom: 12px;
+        @media (max-width: 600px) {
+          flex-direction: column;
+          align-items: center;
+        }
       }
       &__left {
         display: flex;
@@ -90,6 +98,9 @@
         font-size: 18px;
         border: 1px solid #157489;
         transition: 0.3s;
+        @media (max-width: 600px) {
+          width: 100%;
+        }
       }
       &__send__btn:hover {
         background-color: #fff;

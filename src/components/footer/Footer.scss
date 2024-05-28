@@ -4,6 +4,12 @@
   .footer {
     display: flex;
     gap: 150px;
+    @media (max-width: 760px) {
+      gap: 50px;
+    }
+    @media (max-width: 560px) {
+      flex-direction: column;
+    }
     &__logo {
       font-size: 30px;
       font-weight: 600;
