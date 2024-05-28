@@ -22,7 +22,7 @@ const About = () => {
                 <h2 data-aos="fade-up" className="about__title">Biz Haqimizda</h2>
                 <p data-aos="fade-up" className="about__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quos sapiente corrupti quis doloribus laudantium, architecto minima ab ullam saepe tenetur rem, aut quidem commodi quasi ratione necessitatibus expedita eaque.</p>
                 <div className="about__wrapper">
-                    <div data-aos="fade-right" className="about__card">
+                    <div data-aos="fade-up" className="about__card">
                         <div className="about__card__frame">
                             <img src={aboutImg1} alt="" />
                         </div>
@@ -48,7 +48,7 @@ const About = () => {
                             </a>
                         </div>
                     </div>
-                    <div data-aos="fade-left" className="about__card">
+                    <div data-aos="fade-up" className="about__card">
                         <div className="about__card__frame">
                             <img src={aboutImg3} alt="" />
                         </div>
