@@ -2,6 +2,11 @@ import React from 'react'
 import "./Footer.scss"
 import { Link } from 'react-router-dom'
 
+import { FaInstagram } from "react-icons/fa";
+import { FaTelegramPlane } from "react-icons/fa";
+import { MdOutlineMailOutline } from "react-icons/md";
+import { LuPhone } from "react-icons/lu";
+
 const Footer = () => {
     return (
         <footer id="footer">
@@ -9,10 +14,22 @@ const Footer = () => {
                 <Link className='footer__logo'>Logo Here</Link>
                 <div className="footer__box">
                     <h3>Social Networks</h3>
-                    <a href="#!">Instagram</a>
-                    <a href="#!">Telegram</a>
-                    <a href="#!">Email</a>
-                    <a href="#!">+999-123-45-67</a>
+                    <a href="#!">
+                        <FaInstagram />
+                        Instagram
+                    </a>
+                    <a href="#!">
+                        <FaTelegramPlane />
+                        Telegram
+                    </a>
+                    <a href="#!">
+                        <MdOutlineMailOutline />
+                        Email
+                    </a>
+                    <a href="#!">
+                        <LuPhone />
+                        +999-123-45-67
+                    </a>
                 </div>
                 <div className="footer__box">
                     <h3>Location</h3>
