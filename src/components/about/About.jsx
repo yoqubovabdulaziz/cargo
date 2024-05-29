@@ -9,6 +9,7 @@ import { FaPhone } from "react-icons/fa6";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
     useEffect(() => {
@@ -16,10 +17,13 @@ const About = () => {
             duration: 1000
         });
     }, [])
+
+    const { t } = useTranslation();
+
     return (
         <section id="about">
             <div className="container about">
-                <h2 data-aos="fade-up" className="about__title">Biz Haqimizda</h2>
+                <h2 data-aos="fade-up" className="about__title">{t('AboutTitle')}</h2>
                 <p data-aos="fade-up" className="about__description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque quos sapiente corrupti quis doloribus laudantium, architecto minima ab ullam saepe tenetur rem, aut quidem commodi quasi ratione necessitatibus expedita eaque.</p>
                 <div className="about__wrapper">
                     <div data-aos="fade-up" className="about__card">

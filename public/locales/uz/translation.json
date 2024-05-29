@@ -1,0 +1,20 @@
+{
+  "navLink1": "Biz haqimizda",
+  "navLink2": "Xizmatlarimiz",
+  "navLink3": "Bog'lanish",
+
+  "AboutTitle": "Biz haqimizda",
+
+  "serviceTitle": "Xizmatlarimiz",
+
+  "contactTitle": "Biz bilan bog'lanish",
+  "contactBoxTitle1": "Manzil",
+  "contactBoxTitle2": "Telefon Raqam",
+  "contactBoxTitle3": "Telegram",
+  "contactInpText1": "Ism",
+  "contactInpText2": "Familiya",
+  "contactInpText3": "Telefon Raqam",
+  "contactInpText4": "Pochta Manzil",
+  "contactInpText5": "Habar",
+  "contactSendBtn": "Yuborish"
+}

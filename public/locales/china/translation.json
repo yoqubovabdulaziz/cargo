@@ -1,0 +1,20 @@
+{
+  "navLink1": "china1",
+  "navLink2": "china2",
+  "navLink3": "china3",
+
+  "AboutTitle": "China Biz haqimizda",
+
+  "serviceTitle": "China Xizmatlarimiz",
+
+  "contactTitle": "China Biz bilan bog'lanish",
+  "contactBoxTitle1": "China Manzil",
+  "contactBoxTitle2": "China Telefon Raqam",
+  "contactBoxTitle3": "China Telegram",
+  "contactInpText1": "China Ism",
+  "contactInpText2": "China Familiya",
+  "contactInpText3": "China Telefon Raqam",
+  "contactInpText4": "China Pochta Manzil",
+  "contactInpText5": "China Habar",
+  "contactSendBtn": "China Yuborish"
+}

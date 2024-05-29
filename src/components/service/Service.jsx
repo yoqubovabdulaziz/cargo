@@ -6,15 +6,19 @@ import { TbTruckDelivery } from "react-icons/tb";
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 const Service = () => {
     useEffect(() => {
         AOS.init();
     }, [])
+
+    const { t } = useTranslation();
+
     return (
         <section id="service">
             <div className="container service">
-                <h2 data-aos="fade-up" className="service__title">Xizmatlarimiz</h2>
+                <h2 data-aos="fade-up" className="service__title">{t('serviceTitle')}</h2>
                 <p data-aos="fade-up" className="service__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis ex illum dolore blanditiis atque provident soluta velit modi cumque </p>
                 <div className="service__wrapper">
                     <div data-aos="fade-up" data-aos-delay="50" className="service__box">

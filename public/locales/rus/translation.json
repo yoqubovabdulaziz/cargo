@@ -1,0 +1,20 @@
+{
+  "navLink1": "rus",
+  "navLink2": "rus",
+  "navLink3": "rus",
+
+  "AboutTitle": "Rus Biz haqimizda",
+
+  "serviceTitle": "Rus Xizmatlarimiz",
+
+  "contactTitle": "Rus Biz bilan bog'lanish",
+  "contactBoxTitle1": "Rus Manzil",
+  "contactBoxTitle2": "Rus Telefon Raqam",
+  "contactBoxTitle3": "Rus Telegram",
+  "contactInpText1": "Rus Ism",
+  "contactInpText2": "Rus Familiya",
+  "contactInpText3": "Rus Telefon Raqam",
+  "contactInpText4": "Rus Pochta Manzil",
+  "contactInpText5": "Rus Habar",
+  "contactSendBtn": "Rus Yuborish"
+}

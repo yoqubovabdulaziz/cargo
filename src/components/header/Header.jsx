@@ -1,23 +1,15 @@
 import React, { useState } from 'react';
 import "./Header.scss";
-import { Link, NavLink } from 'react-router-dom';
 
 import { FaAngleDown } from "react-icons/fa6";
 import { MdLanguage } from "react-icons/md";
-import { IoMenu } from "react-icons/io5";
+import { IoMenu, IoClose } from "react-icons/io5";
+
+import { useTranslation } from 'react-i18next';
+import "../../i18n"
 
 const Header = () => {
-    const [languageBox, setLanguageBox] = useState(false);
-    const [currentLanguageName, setCurrentLanguageName] = useState("Uzbek");
-
-    const handleLanguageChange = (languageName) => {
-        setCurrentLanguageName(languageName);
-        setLanguageBox(true);
-    };
-
-    const languages = ["Uzbek", "Rus", "China"];
-    const availableLanguages = languages.filter(lang => lang !== currentLanguageName);
-
+    const [katalog, setKatalog] = useState(false)
     const navbarShrink = () => {
         const nav = document.querySelector("header");
         if (window.scrollY > 100) {
@@ -26,8 +18,23 @@ const Header = () => {
             nav.classList.remove("nav__shrink");
         }
     }
-
     window.addEventListener("scroll", navbarShrink);
+
+    const [currentLang, setCurrentLang] = useState("Uzbek");
+
+    let langitems = [
+        { code: 'rus', name: 'Rus' },
+        { code: 'china', name: 'China' },
+        { code: 'uz', name: 'Uzbek' },
+    ]
+
+    const [lngDropdown, setLngDropdown] = useState(false);
+
+    const { t, i18n } = useTranslation();
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
     return (
         <>
@@ -37,36 +44,45 @@ const Header = () => {
                         Logo Here
                     </a>
                     <div className="nav__list">
-                        <a href='#about'>Biz haqimizda</a>
-                        <a href='#service'>Xizmatlarimiz</a>
-                        <a href='#contact'>Bog'lanish</a>
+                        <a href='#about'>{t('navLink1')}</a>
+                        <a href='#service'>{t('navLink2')}</a>
+                        <a href='#contact'>{t('navLink3')}</a>
                     </div>
                     <div className="nav__end">
-                        <button onClick={() => setLanguageBox(prev => !prev)} className="nav__end__language__btn">
-                            <div className="language__btn__frame">
-                                <MdLanguage />
-                                <span className='current__name'>{currentLanguageName}</span>
-                            </div>
-                            <span className='language__btn__down'>
-                                <FaAngleDown />
-                            </span>
-                            <div className={`language__dropdown ${languageBox ? "show__language__dropdown" : ""}`}>
-                                {availableLanguages.map(language => (
-                                    <div key={language} onClick={() => handleLanguageChange(language)} className="language__dropdown__item">
-                                        <div className="language__dropdown__item__frame">
-                                            <span>{language}</span>
-                                        </div>
-                                    </div>
-                                ))}
+                        <button onClick={() => setLngDropdown(p => !p)} className="nav__end__language__btn">
+                            <MdLanguage className='lang__icon' />
+                            {
+                                localStorage.getItem('current_lang') || currentLang
+                            }
+                            <FaAngleDown className='down__icon' />
+                            <div className={`language__dropdown ${lngDropdown ? "show__lang__dropdown" : ""}`}>
+                                {
+                                    langitems.map(el => (
+                                        <button key={el.name} onClick={() => {
+                                            changeLanguage(el.code)
+                                            setCurrentLang(el.name)
+                                            localStorage.setItem('current_lang', el.name)
+                                        }} className="language__item">
+                                            {el.name}
+                                        </button>
+                                    ))
+                                }
                             </div>
                         </button>
-                        <button className="nav__menu__btn">
-                            <IoMenu />
+                        <button onClick={() => setKatalog(p => !p)} className="nav__menu__btn">
+                            {
+                                katalog ? <IoClose /> : <IoMenu />
+                            }
                         </button>
                     </div>
                 </nav>
             </header>
 
+            <div className={`nav__katalog ${katalog ? "show__nav__katalog" : ""}`}>
+                <a href='#about'>{t('navLink1')}</a>
+                <a href='#service'>{t('navLink2')}</a>
+                <a href='#contact'>{t('navLink3')}</a>
+            </div>
         </>
     );
 };
